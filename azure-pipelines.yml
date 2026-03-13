@@ -1,0 +1,50 @@
+trigger:
+- main
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+variables:
+  buildConfiguration: 'Release'
+
+steps:
+
+# Install .NET
+- task: UseDotNet@2
+  inputs:
+    packageType: 'sdk'
+    version: '8.x'
+
+# Restore .NET packages
+- script: |
+    dotnet restore AzureDevops/AzureNetCoreAPI/AzureNetCoreAPI.sln
+  displayName: 'Restore .NET packages'
+
+# Build .NET project
+- script: |
+    dotnet build AzureDevops/AzureNetCoreAPI/AzureNetCoreAPI.sln --configuration $(buildConfiguration)
+  displayName: 'Build .NET API'
+
+# Install Node.js
+- task: NodeTool@0
+  inputs:
+    versionSpec: '18.x'
+  displayName: 'Install Node.js'
+
+# Install frontend dependencies
+- script: |
+    cd AzureDevops/auth-demo
+    npm install
+  displayName: 'Install React dependencies'
+
+# Build React app
+- script: |
+    cd AzureDevops/auth-demo
+    npm run build
+  displayName: 'Build React App'
+
+# Publish build artifacts
+- task: PublishBuildArtifacts@1
+  inputs:
+    pathToPublish: '$(Build.SourcesDirectory)'
+    artifactName: 'drop'
