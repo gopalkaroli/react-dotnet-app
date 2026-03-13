@@ -1,0 +1,24 @@
+# Node / React
+node_modules/
+build/
+dist/
+.env
+.env.local
+npm-debug.log*
+
+# .NET
+bin/
+obj/
+*.user
+*.suo
+
+# IDE
+.vs/
+.vscode/
+
+# Logs
+*.log
+
+# OS
+.DS_Store
+Thumbs.db

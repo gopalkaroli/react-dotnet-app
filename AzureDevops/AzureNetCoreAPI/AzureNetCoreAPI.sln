@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36915.13 d17.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AzureNetCoreAPI", "AzureNetCoreAPI\AzureNetCoreAPI.csproj", "{F07D2CCF-F5CF-4621-ACF6-8548579C4095}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F07D2CCF-F5CF-4621-ACF6-8548579C4095}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F07D2CCF-F5CF-4621-ACF6-8548579C4095}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F07D2CCF-F5CF-4621-ACF6-8548579C4095}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F07D2CCF-F5CF-4621-ACF6-8548579C4095}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1BAA9798-4256-4F14-95D3-E0C9BA28E4A2}
+	EndGlobalSection
+EndGlobal

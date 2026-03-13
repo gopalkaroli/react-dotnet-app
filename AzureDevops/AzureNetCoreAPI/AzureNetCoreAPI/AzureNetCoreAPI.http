@@ -1,0 +1,6 @@
+@AzureNetCoreAPI_HostAddress = http://localhost:5249
+
+GET {{AzureNetCoreAPI_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
